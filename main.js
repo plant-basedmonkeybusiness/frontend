@@ -1,6 +1,9 @@
 const db = firebase.firestore();
+const auth = firebase.auth();
 const mainDiv = document.querySelector('#main'); 
 const myArray = [];
+
+//db.settings({timestampsInSnapshot: true});
 
 db.collection("plants").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
