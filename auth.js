@@ -12,9 +12,9 @@ signupForm.addEventListener('submit', (e) => {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     console.log(cred);
     // close the signup modal & reset form
-    const modal = document.querySelector('#modal-signup');
-    M.Modal.getInstance(modal).close();
-    signupForm.reset();
+    // const modal = document.querySelector('#modal-signup');
+    // M.Modal.getInstance(modal).close();
+    // signupForm.reset();
   });
 });
 // logout
@@ -23,6 +23,7 @@ logout.addEventListener('click', (e) => {
   e.preventDefault();
   auth.signOut().then(() => {
     console.log('user signed out');
+    window.location.replace("../frontend/index.html");
   })
 });
 // login
@@ -35,12 +36,16 @@ loginForm.addEventListener('submit', (e) => {
   const password = loginForm['login-password'].value;
 
   // log the user in
-  auth.signInWithEmailAndPassword(email, password).then((cred) => {
+  auth.signInWithEmailAndPassword(email, password)
+  .then((cred) => {
     console.log(cred.user);
     // close the signup modal & reset form
-    const modal = document.querySelector('#modal-login');
-    M.Modal.getInstance(modal).close();
-    loginForm.reset();
+    // const modal = document.querySelector('#modal-login');
+    // M.Modal.getInstance(modal).close();
+    // loginForm.reset();
+    window.location.replace("../cms/index.html");
+
   });
+  
 
 });

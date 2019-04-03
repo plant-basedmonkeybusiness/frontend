@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Framendi</title>
+    <title>The Green Room</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -76,7 +76,10 @@
           <div class="account-extras"></div>
         </div>
       </div>
-    
+    <div id="filters">
+      <button id="price-filter">Under $25</button>
+      <button id="alphabet-sort">Sort by name</button>      
+    </div>
       <!-- MAIN -->
     <div id="main"></div>
     
@@ -84,18 +87,19 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+      <!-- Initialize Firebase-->
+        
     <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyDknGQVWQ4tSbVvyF0f6i9dsneyIxqCoUs",
-          authDomain: "lokaverkefni-79475.firebaseapp.com",
-          databaseURL: "https://lokaverkefni-79475.firebaseio.com",
-          projectId: "lokaverkefni-79475",
-          storageBucket: "lokaverkefni-79475.appspot.com",
-          messagingSenderId: "625220370214"
-        };
-        firebase.initializeApp(config);
-    </script>     
+      var config = {
+        apiKey: "AIzaSyA00MbQRFIPqOihGdSu5m68Lf8Bc9wAUkE",
+        authDomain: "js-2-final.firebaseapp.com",
+        databaseURL: "https://js-2-final.firebaseio.com",
+        projectId: "js-2-final",
+        storageBucket: "js-2-final.appspot.com",
+        messagingSenderId: "857963247699"
+      };
+      firebase.initializeApp(config);
+    </script>    
     <script src="main.js"></script>
     <script src="auth.js"></script>
 
