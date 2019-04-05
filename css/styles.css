@@ -199,7 +199,8 @@ h4 {
 
 .sendBtn,
 #searchBtn,
-.filter-btn {
+.filter-btn,
+.sunna {
     width: 160px;
     height: 40px;
     background-color: #6b5222;
