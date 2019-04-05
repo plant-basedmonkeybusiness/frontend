@@ -1,4 +1,27 @@
-   
+ // Modal Sign up
+const modal = document.querySelector('#modal-signup');
+const modalOpen = document.querySelector('#sign-up-btn');
+const modalClose = document.querySelector('#close-btn-signup');
+
+modalOpen.addEventListener('click', ()=> {
+  modal.classList.add('active');
+});
+modalClose.addEventListener('click', ()=> {
+  modal.classList.remove('active');
+});
+
+ // Modal Log in
+ const logInModal = document.querySelector('#modal-login');
+ const openLogInModal = document.querySelector('#login-btn');
+ const closeLogInModal = document.querySelector('#close-btn-login');
+ 
+ openLogInModal.addEventListener('click', ()=> {
+  logInModal.classList.add('active');
+ });
+ closeLogInModal.addEventListener('click', ()=> {
+  logInModal.classList.remove('active');
+ });
+ 
 // signup
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
@@ -46,6 +69,4 @@ loginForm.addEventListener('submit', (e) => {
     window.location.replace("../cms/index.html");
 
   });
-  
-
 });

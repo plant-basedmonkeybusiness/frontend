@@ -5,47 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Green Room</title>
-    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
    <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4">
-        <div class="nav-wrapper container">
+  <nav class="navbar">
+      <div class="nav-left">
           <a href="#" class="brand-logo">
-            <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
+            <img src="img/logo.svg">
           </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </div>
+      <div class="nav-right">
+          <ul class="log-in">
               <li class="logged-in">
-                <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
-              </li>
-              <li class="logged-in">
-                <a href="#" class="grey-text" id="logout">Logout</a>
-              </li>
-              <li class="logged-in">
-                <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+                <a href="#" id="logout">Log out</a>
+              </li>           
+              <li class="logged-out">
+                <a href="#" id="login-btn" data-target="modal-login">Log in</a>
               </li>
               <li class="logged-out">
-                <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-              </li>
-              <li class="logged-out">
-                <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                <a href="#" id="sign-up-btn" data-target="modal-signup">Sign up</a>
               </li>
             </span>
           </ul>
         </div>
       </nav>
+      <!--HERO -->
+      <div class="hero-wrapper">
+          <img src="img/hero-img.jpg" class="hero-img">
+        <div class="headline">
+          <h1>We are the plant shop<br>you have been looking for</h1>
+        </div>
+      </div>
       <!-- SIGN UP MODAL -->
       <div id="modal-signup" class="modal">
         <div class="modal-content">
+          <i id="close-btn-signup"class="fas fa-times"></i>
           <h4>Sign up</h4><br />
           <form id="signup-form">
-            <div class="input-field">
-              <input type="email" id="signup-email" required />
-              <label for="signup-email">Email address</label>
+            <div class="input-field">                        
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" required/>
             </div>
             <div class="input-field">
+              <label for="signup-password">Password</label>
               <input type="password" id="signup-password" required />
-              <label for="signup-password">Choose password</label>
             </div>
             <button class="btn yellow darken-2 z-depth-0">Sign up</button>
           </form>
@@ -54,34 +61,34 @@
       <!-- LOGIN MODAL -->
       <div id="modal-login" class="modal">
         <div class="modal-content">
+          <i id="close-btn-login"class="fas fa-times"></i>
           <h4>Login</h4><br />
           <form id="login-form">
             <div class="input-field">
-              <input type="email" id="login-email" required />
-              <label for="login-email">Email address</label>
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required />    
             </div>
             <div class="input-field">
+              <label for="login-password">Password:</label>
               <input type="password" id="login-password" required />
-              <label for="login-password">Your password</label>
             </div>
             <button class="btn yellow darken-2 z-depth-0">Login</button>
           </form>
         </div>
       </div>
-      <!-- ACCOUNT MODAL -->
-      <div id="modal-account" class="modal">
-        <div class="modal-content center-align">
-          <h4>Account details</h4><br />
-          <div class="account-details"></div>
-          <div class="account-extras"></div>
-        </div>
+    <!--Filter-->
+    <div class="filter-container">
+      <h3 class="headline">Shop</h3>
+      <div id="filters">
+        <span>Sort by:</span>
+        <button id="price-filter" class="filter-btn">Under $25</button>
+        <button id="alphabet-sort" class="filter-btn">Sort by name</button>      
       </div>
-    <div id="filters">
-      <button id="price-filter">Under $25</button>
-      <button id="alphabet-sort">Sort by name</button>      
     </div>
       <!-- MAIN -->
-    <div id="main"></div>
+    <div id="main">
+      
+    </div>
     
     <!--Scripts-->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
